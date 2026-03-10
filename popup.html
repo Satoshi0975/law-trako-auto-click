@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SSDLC Auto Click</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 260px;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #1e1e2e;
+        color: #cdd6f4;
+      }
+
+      .header {
+        padding: 14px 16px 12px;
+        background: #181825;
+        border-bottom: 1px solid #313244;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .header-icon {
+        width: 28px;
+        height: 28px;
+        background: #89b4fa;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .header-text h1 {
+        font-size: 13px;
+        font-weight: 600;
+        color: #cdd6f4;
+        letter-spacing: 0.3px;
+      }
+
+      .header-text span {
+        font-size: 10px;
+        color: #6c7086;
+      }
+
+      .section {
+        padding: 10px 12px;
+        border-bottom: 1px solid #313244;
+      }
+
+      .section-label {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #6c7086;
+        margin-bottom: 8px;
+      }
+
+      .menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.15s;
+        border: none;
+        background: transparent;
+        width: 100%;
+        color: #cdd6f4;
+        font-size: 13px;
+        text-align: left;
+      }
+
+      .menu-item:hover {
+        background: #313244;
+      }
+
+      .menu-item:active {
+        background: #45475a;
+      }
+
+      .menu-item-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .menu-item-icon {
+        font-size: 15px;
+      }
+
+      .badge {
+        font-size: 10px;
+        background: #a6e3a1;
+        color: #1e1e2e;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .badge.hidden {
+        display: none;
+      }
+
+      .status {
+        padding: 10px 12px;
+        font-size: 11px;
+        color: #6c7086;
+        min-height: 34px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .status.success {
+        color: #a6e3a1;
+      }
+
+      .status.error {
+        color: #f38ba8;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+        flex-shrink: 0;
+      }
+
+      .footer {
+        padding: 8px 12px;
+        background: #181825;
+        border-top: 1px solid #313244;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer span {
+        font-size: 10px;
+        color: #45475a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-icon">✔</div>
+      <div class="header-text">
+        <h1>SSDLC Auto Click</h1>
+        <span>自動點擊工具</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">操作</div>
+      <button class="menu-item" id="btn">
+        <div class="menu-item-left">
+          <span class="menu-item-icon">🎯</span>
+          <span>點擊所有「符合」</span>
+        </div>
+        <span class="badge hidden" id="badge">0</span>
+      </button>
+    </div>
+
+    <div class="status" id="result">
+      <span>請點擊上方按鈕開始執行</span>
+    </div>
+
+    <div class="footer">
+      <span>Made by David</span>
+      <span>v1.0</span>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

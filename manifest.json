@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Click 符合",
+  "version": "1.0",
+  "description": "勾選所有SSDLC自動勾符合",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "點擊所有符合"
+  }
+}

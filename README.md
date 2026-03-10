@@ -8,7 +8,10 @@
 
 ### 步驟一：下載檔案
 
-將整個 `my-extension` 資料夾存放到你的電腦中任意路徑
+[下載整個專案](https://github.com/Satoshi0975/law-trako-auto-click/releases/tag/v1.0)
+並解壓縮到任意位置
+
+(git clone 也可以)
 
 ### 步驟二：開啟 Chrome 擴充功能頁面
 
@@ -24,7 +27,7 @@ chrome://extensions
 
 ### 步驟四：載入擴充功能
 
-點擊左上角的「**載入未封裝項目**」按鈕，選擇 `my-extension` 資料夾。
+點擊左上角的「**載入未封裝項目**」按鈕，選擇剛剛解壓縮的資料夾。
 
 ### 步驟五：確認安裝成功
 

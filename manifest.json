@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Auto Click 符合",
-  "version": "1.0",
+  "version": "1.1",
   "description": "勾選所有SSDLC自動勾符合",
   "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://api.github.com/*"],
   "action": {
     "default_popup": "popup.html",
     "default_title": "點擊所有符合"

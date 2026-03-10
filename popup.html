@@ -148,6 +148,96 @@
         font-size: 10px;
         color: #45475a;
       }
+
+      /* Update Modal */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+      }
+
+      .modal-overlay.hidden {
+        display: none;
+      }
+
+      .modal {
+        background: #1e1e2e;
+        border: 1px solid #45475a;
+        border-radius: 10px;
+        width: 240px;
+        overflow: hidden;
+      }
+
+      .modal-header {
+        padding: 12px 14px 8px;
+        border-bottom: 1px solid #313244;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .modal-header span:first-child {
+        font-size: 16px;
+      }
+
+      .modal-header span:last-child {
+        font-size: 13px;
+        font-weight: 600;
+        color: #f9e2af;
+      }
+
+      .modal-body {
+        padding: 10px 14px;
+        font-size: 12px;
+        color: #a6adc8;
+        line-height: 1.6;
+        max-height: 160px;
+        overflow-y: auto;
+      }
+
+      .modal-body h3 {
+        font-size: 12px;
+        color: #cdd6f4;
+        margin-bottom: 4px;
+      }
+
+      .modal-footer {
+        padding: 8px 14px 12px;
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+
+      .modal-btn {
+        padding: 5px 12px;
+        border-radius: 6px;
+        border: none;
+        font-size: 11px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .modal-btn.primary {
+        background: #89b4fa;
+        color: #1e1e2e;
+      }
+
+      .modal-btn.primary:hover {
+        background: #74c7ec;
+      }
+
+      .modal-btn.secondary {
+        background: #313244;
+        color: #cdd6f4;
+      }
+
+      .modal-btn.secondary:hover {
+        background: #45475a;
+      }
     </style>
   </head>
   <body>
@@ -176,7 +266,22 @@
 
     <div class="footer">
       <span>Made by David</span>
-      <span>v1.0</span>
+      <span id="ssdlc-version-badge" style="font-size: 10px; color: #45475a"></span>
+    </div>
+
+    <!-- Update Modal -->
+    <div class="modal-overlay hidden" id="update-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <span>🔔</span>
+          <span id="modal-title">有新版本可用</span>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+        <div class="modal-footer">
+          <button class="modal-btn secondary" id="modal-close">稍後再說</button>
+          <a id="modal-download" class="modal-btn primary" target="_blank" style="text-decoration:none;">前往下載</a>
+        </div>
+      </div>
     </div>
 
     <script src="popup.js"></script>
